@@ -182,10 +182,10 @@ a:hover {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, var(--almond) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, var(--clam-shell) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, var(--brandy) 0%, transparent 50%);
-    opacity: 0.3;
+        radial-gradient(circle at 20% 80%, var(--silver-sand) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--xanadu) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, var(--laser) 0%, transparent 50%);
+    opacity: 0.2;
     animation: float 20s ease-in-out infinite;
 }
 
@@ -233,20 +233,21 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background: transparent;
-    color: var(--mine-shaft);
-    border-color: var(--mine-shaft);
+    background: var(--empress);
+    color: var(--vista-white);
+    border-color: transparent;
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--mine-shaft);
-    border-color: var(--brandy);
+    border-color: var(--mine-shaft);
 }
 
 .btn-secondary:hover {
-    background: var(--brandy);
+    background: var(--xanadu);
     color: var(--vista-white);
+    border-color: var(--xanadu);
 }
 
 /* Content Sections */
@@ -283,7 +284,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--almond) 0%, transparent 100%);
+    background: linear-gradient(135deg, var(--xanadu) 0%, transparent 100%);
     opacity: 0;
     transition: var(--transition-base);
 }
@@ -294,14 +295,14 @@ a:hover {
 }
 
 .feature-card:hover::before {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .feature-icon {
     width: 60px;
     height: 60px;
     margin-bottom: var(--space-md);
-    background: var(--laser);
+    background: var(--mine-shaft);
     border-radius: 50%;
     display: flex;
     align-items: center;
