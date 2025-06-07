@@ -32,7 +32,7 @@ get_header(); ?>
     </section>
     
     <!-- Features Section -->
-    <section id="explore" class="content-section" style="background: rgba(205, 170, 166, 0.1);">
+    <section id="explore" class="content-section" style="background: rgba(116, 124, 119, 0.05);">
         <div class="container">
             <h2 class="text-center fade-in">Cultivate Your Evolution</h2>
             
@@ -98,4 +98,63 @@ get_header(); ?>
             </div>
             
             <div class="text-center" style="margin-top: 3rem;">
-                <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="btn
+                <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="btn btn-primary">View All Insights</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Style Section -->
+    <section id="style" class="content-section" style="background: rgba(197, 200, 203, 0.1);">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2>Style as Sacred Expression</h2>
+                <p class="lead">Curated aesthetics that speak to your evolution. Every recommendation is chosen for its ability to reflect inner depth through outer beauty.</p>
+            </div>
+            
+            <?php
+            $style_guides = new WP_Query(array(
+                'post_type'      => 'style_guide',
+                'posts_per_page' => 4,
+                'orderby'        => 'date',
+                'order'          => 'DESC'
+            ));
+            
+            if ($style_guides->have_posts()) : ?>
+                <div class="blog-grid" style="margin-top: 3rem;">
+                    <?php while ($style_guides->have_posts()) : $style_guides->the_post(); ?>
+                        <article class="blog-card fade-in">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('auralith-blog-thumb', array('class' => 'blog-image')); ?>
+                                </a>
+                            <?php endif; ?>
+                            
+                            <div class="blog-content">
+                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <?php the_excerpt(); ?>
+                            </div>
+                        </article>
+                    <?php endwhile; ?>
+                </div>
+            <?php wp_reset_postdata();
+            endif; ?>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="newsletter-box fade-in">
+                <h2>Join the Evolution</h2>
+                <p>Weekly insights on intentional living, curated style, and the art of becoming.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<?php get_footer(); ?>
