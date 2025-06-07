@@ -60,10 +60,13 @@ The theme uses CSS custom properties for easy color customization:
 ```css
 --mine-shaft: #242424;    /* Primary dark */
 --vista-white: #faf4f2;   /* Primary light */
+--clam-shell: #cdaaa6;    /* Muted rose */
+--brandy: #dbc090;        /* Warm gold */
 --silver-sand: #c5c8cb;   /* Neutral gray */
---xanadu: #747c77;        /* Sage green */
---empress: #7c7375;       /* Muted purple */
+--shady-lady: #a19fa0;    /* Warm gray */
 --laser: #cfaf6e;         /* Gold accent */
+--empress: #7c7375;       /* Muted purple */
+--xanadu: #747c77;        /* Sage green */
 ```
 
 ### Typography
